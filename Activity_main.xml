@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+//perintah di atas berarti membuat tampilan tinggi dan lebar layout menyesuaikan dengan lebar layout dan kelas yang digunakan yaitu MainActivity
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15px"
+        android:text="Nama" />
+//program di atas berarti membuat Textview yang menampilkan teks TextView. Ukuran layout lebar dan tingginya menyesuaikan dengan isinya. Textview ini diberi id dengan label. Padding top sebesar 15px
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android: layout_alignBaseline="@id/label"
+        android:layout_toRightOf="@id/label" />
+//program di atas berarti membuat EditText (tampilan teks) dengan ukuran lebar mengikuti isi layar dan tinggi layout mengikuti isinya, Id EditText ini adalah entry, sejajar dengan yang memiliki id label, dan berada di sebelah kanannya id label
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entry"
+        android:layout_alignRight="@id/entry"
+        android:layout_marginTop="20dp"
+        android:text="OK" />
+//program di atas berarti membuat Button(tombol) dengan teks OK. Ukuran layout lebar dan tingginya menyesuaikan dengan isinya. Button ini diberi id dengan OK. Posisinya berada di bawah id entry, berada di layout kananm memiliki margin top 20dp
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ok"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="39dp"
+        android:layout_toLeftOf="@id/ok"
+        android:text="Cancel" />
+//program di atas membuat Button (tombol) dengan teks Cancel. Ukuran layout lebar dan tingginya menyesuaikan dengan isinya, Button ini diberi id dengan cancel, dengan margin top 39dp
+</RelativeLayout>
